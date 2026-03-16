@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/*全体共通部分*/
+body {
+    font-family: Arial, sans-serif;   /* 全体のフォント */
+    background-color: #eef5f3;      /* 背景色を明るいグレーグリーンに */
+    text-align: center;               /* 中央寄せ */
+    display: flex;                    /* フレックスコンテナにする */
+    flex-direction: column;           /* 縦方向に並べる */
+    justify-content:flex-start;       /* 縦方向の上寄せ */
+    align-items:center;               /* 横方向の中央寄せ */
+    margin: 0;
+    min-height: 100vh;                /* 画面全体の高さを確保 */
+    padding-top: 50px;                /* 余白の調整 */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2 {
+    color: #333;                    /* 見出しの文字色 */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;               
+    margin-bottom: 20px;
+}
+
+/* ログイン、登録フォーム全体の枠や配置 */
+.login-form, .register-form {
+    width: 300px;          
+    margin: 30px auto;                 /* 画面中央に配置 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa; 
+}
+
+/* ログイン入力欄のスタイル */
+.form-input {
+    width: 100%;                       /* 横幅いっぱい */
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 4px;                /* 角を少し丸く */
+    font-size: 14px;
+}
+
+/* ボタンのスタイル（既存のsubmitに追加でクラス指定した場合） */
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;       /* 緑色 */
+    color: white;
+    border: none;
+    border-radius: 4px;               /* 角を少し丸く */
+    cursor: pointer;
+}
+.form-button:hover {
+    background-color: #45a049;
+}
+
+/*課題文テキスト*/
+p.exercise-text {
+	width: 80%;
+	font-size: 22px;
+	margin-bottom: 20px;
+	text-align: left;
+	background-color: #fafafa;       /*背景薄いグレー*/
+	border: 1px solid #ccc;
+	border-radius: 5px;                /* 角を少し丸く */
+	padding: 15px;
+	line-height: 1.6;
+}
+/*演習入力テキストエリア*/
+.typing-textarea {
+    width: 800px;                      
+    height: 150px; 
+    color: #444;                   
+    font-size: 20px;                  
+    font-family: "Noto Sans JP", sans-serif;
+    padding: 10px;                    
+    border: 2px solid #ccc;          
+    border-radius: 5px;                 /* 角を少し丸く */
+    overflow-y: auto;             
+    resize: none;                       /* ユーザーがサイズ変更できないように */
+    min-height: 150px;                  /* 最低限の高さ */
+    max-height: 300px;                  /* 最大高さ */
+    white-space: pre-wrap;              /*改行を保持*/
+    box-sizing: border-box;             /*padding込みで幅を計算*/
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease; /*背景色の変化*/
+}
+/*演習入力画面にフォーカスするとき*/
+.typing-textarea:focus {
+    background-color: #f5f5f5;
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /*フォーカス時boxに緑の影が入る*/
+    outline: none;
+}
+
+/*登録画面などの送信ボタン*/
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;        /* 緑色のボタン */
+    color: white;
+    border: none;
+    border-radius: 5px;                 /* 角を少し丸く */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;        /* ホバー時に少し濃い緑に */
+}
+
+/*結果画面の間違い文字*/
+.mistake {
+	color:red;                        /* 間違い文字赤色 */
+	font-weight: bold;
+}
+
+/*結果画面のテキスト表示部分*/
+.result-width, .input-text {
+	width: 800px;                       /*最大幅*/
+	font-family: monospace;             /*文字位置がそろうように等幅のフォントを使用*/
+	overflow-wrap: break-word;          /*長い単語も折り返す*/
+	white-space: pre-wrap;              /*改行やスペースも保持しつつ折り返す*/
+	text-align: left;                   /*左寄せ*/
+	margin: 10px auto;                  /*中央に配置*/
+	padding: 15px;                      /*内側余白*/
+	background-color: #fafafa;           /*背景白*/
+	border: 1px solid #ccc;           /*枠線*/
+	border-radius: 5px;                 /*角を丸く*/
+	font-size: 16px;                    /*文字サイズ*/
+	line-height: 1.6;                   /*行間*/
+}
+

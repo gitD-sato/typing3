@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+ body {
+   font-family: Arial, sans-serif;   /* 全体のフォント */
+   background-color: #eef5f3;      /* 背景色を明るいグレーグリーンに */
+   text-align: center;               /* 中央寄せ */   
+   margin: 0;   
+   padding: 20px;
+ }
+ 
+ textarea {
+   width: 90%;                       /* 横幅を画面の9割に */
+   max-width: 600px;                 /* 最大幅 */
+   height: 70px;                     /* 高さを固定 */
+   font-size: 18px;                  /* 入力文字サイズ */
+   padding: 10px;                    /* 内側余白 */
+   border: 2px solid #ccc;         /* 枠線 */
+   resize: none;                     /* ユーザーがサイズ変更できないように */
+ }
+ 
+ /*特定の要素を指定の時、.をいれる。*/
+ .task-table {                       
+   width: 95%;
+   margin: 20px auto;
+   border-collapse: collapse;         /* テーブルの線を1本に */
+ }
+ .task-table th, .task-table td {
+   border: 1px solid #ccc;
+   padding: 8px;
+   text-align: center;
+   vertical-align: middle;
+   word-break: break-word;            /*長文を折り返す*/
+ }
+  .task-table th {
+   background-color: #f0f0f0;
+ }
+  .edit-text {
+   width: 95%;
+   height: 60px;
+   font-size: 14px;
+   resize: none;
+ }
+  .btn {
+   padding: 3px 8px;
+   font-size: 13px;
+   margin-top: 3px;
+ } 
+ 
+ .admin-table {
+	 width:80%;
+	 margin:30px auto;
+	 border-collapse: collapse;        /* テーブルの線を1本に */
+	 background-color: #fafafa;
+ } 
+ 
+ .admin-table th, .admin-table td {
+	 border: 1px solid #ccc;
+	 padding: 10px;
+	 text-align: center;
+ }
+ 
+ .admin-table th {
+	 background-color: #e8e8e8;
+ }
+ 
+ .admin-table input[type="password"]{
+	 width: 140px;
+	 padding: 5px;
+ }
+ .admin-table input[type="submit"]{
+	 padding: 5px 10px;
+	 cursor: pointer;
+ }
